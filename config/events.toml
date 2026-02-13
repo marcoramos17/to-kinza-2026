@@ -44,7 +44,7 @@ dialogue = [
 [[events]]
 emoji = "🕊️"
 x = 10
-y = 8
+y = 12
 triggers_minigame = ""
 particles = "hearts"
 dialogue = [
@@ -164,15 +164,15 @@ dialogue = [
 
 [[events]]
 emoji = "🍓"
-x = 26
-y = 26
+x = 20
+y = 21
 triggers_minigame = ""
 particles = "hearts"
 dialogue = [
   "Kitty Marco: We went through so so much, in just 1.5y",
   "narrator: And shared so many freaky moments",
 
-  "[effect:emoji=💦,animation=drooping,in=[player:x=10,y=-8,scale=0.8],duration=3]",
+  "[effect:emoji=💦,animation=drooping,in=[player:x=10,y=40,scale=0.8],duration=3]",
   "Kitty Marco: YESSS 🥵 She's honestly perfect...",
   "Kitty Marco: She's absolutely drop dead gorgeous, stunning",
   "Kitty Marco: I love the way she matches my freak",

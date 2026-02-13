@@ -151,9 +151,9 @@
     G.ctx.clearRect(0, 0, G.canvas.width, G.canvas.height);
     G.drawMap(cam);
     G.drawEvents(cam);
-    G.drawParticles(cam);
     G.drawPlayer(cam);
     if (G.drawCollidableDecorations) G.drawCollidableDecorations(cam);
+    G.drawParticles(cam);
   }
 
   function loop(now) {

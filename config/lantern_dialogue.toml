@@ -1,5 +1,12 @@
-# Dialogue shown when the player clicks "No" in the lantern minigame.
+# Dialogue shown at minigame start and when the player clicks "No".
 # Same format as events.toml: "Name: message" or "narrator: message"
+
+[start_instructions]
+dialogue = [
+  "Kitty Marco: We've arrived.",
+  "Kitty Marco: Let's release lanterns to light up the sky, this is our own lantern festival!",
+  "narrator: Drag the lanterns to the where you want to release them, they'll fly upward from that spot."
+]
 
 [no_response]
 dialogue = [

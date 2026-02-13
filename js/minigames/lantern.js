@@ -618,6 +618,8 @@
 
   function start() {
     initConfig();
+
+    // Show minigame container and initialize canvas/rendering FIRST, then show dialogue on top
     G.showMinigame();
 
     // Preload the ground sprite
@@ -626,7 +628,7 @@
     groundImg.onerror = function() { groundImg = null; };
     groundImg.src = base + config.spriteUrl;
 
-    // Wait a frame for the container to be visible, then initialize canvas
+    // Wait a frame for the container to be visible, then initialize canvas and start rendering
     requestAnimationFrame(function() {
       if (!initCanvas()) {
         console.error('Failed to initialize minigame canvas');
@@ -651,6 +653,27 @@
       setupEventListeners();
       loop.lastTime = (typeof performance !== 'undefined' && performance.now) ? performance.now() : Date.now();
       animationId = requestAnimationFrame(loop);
+
+      // Now that minigame is rendering, fetch and show the instruction dialogue on top
+      fetch((base || '') + 'config/lantern_dialogue.toml')
+        .then(function(r) { return r.text(); })
+        .then(function(t) {
+          var parsed = typeof parseTOML !== 'undefined' ? parseTOML(t) : {};
+          var block = parsed.start_instructions || {};
+          var rawLines = block.dialogue || [];
+          if (G.startDialogueWithLines && rawLines.length) {
+            G.startDialogueWithLines(rawLines, function() {
+              // Dialogue closed, minigame continues running
+            });
+            requestAnimationFrame(function() {
+              var box = G.dialogueBoxEl;
+              if (box) box.style.zIndex = '50';
+            });
+          }
+        })
+        .catch(function(e) {
+          console.error('Failed to load lantern_dialogue.toml', e);
+        });
     });
   }
 
@@ -660,6 +683,7 @@
       animationId = null;
     }
     window.removeEventListener('resize', resizeCanvas);
+    if (G.dialogueBoxEl) G.dialogueBoxEl.style.zIndex = '';
     G.hideMinigame();
   }
 
