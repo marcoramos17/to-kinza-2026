@@ -1,0 +1,30 @@
+# Effect types used in dialogue (events.toml). Animation styles from config/animations.toml.
+# Use: "[effect:img=path,...]" or "[effect:emoji=🌹,...]" (no quotes around emoji!)
+# Image popup with Close button (no duration): "[effect:img-box=images/events/kcat.png]"
+#
+# Places: screen, player, textbox. Use in=[screen] or in=[player,textbox] or
+#   in=[player:x=0.02,y=-0.7,scale=1.2;textbox] for per-place offset/scale.
+# Offsets are normalized: 1 = 100% of tile/element size. x positive=right, y positive=down.
+
+[image]
+animation_default = "pop-up"
+duration_default = 0.5
+
+[emoji]
+animation_default = "pop-up"
+
+# Default scale and offset for each place. Inline x=, y=, scale= override these.
+[screen]
+scale = 1
+offset_x = 0
+offset_y = 0
+
+[player]
+scale = 1
+offset_x = 0
+offset_y = -0.5
+
+[textbox]
+scale = 0.9
+offset_x = 0.5
+offset_y = 0

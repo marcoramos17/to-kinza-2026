@@ -1,0 +1,211 @@
+# Events in order. Player must find each one in sequence.
+# Dialogue: "Name: message" for character, or "message" for narrator.
+# Effects: use quoted strings so TOML parses them as one item. No quotes around emoji!
+#   "[effect:img=images/events/kcat.png,animation=pop-up,in=screen,duration=0.5]"
+#   "[effect:emoji=🌹,animation=pop-up,in=[textbox:x=-1,y=-11,scale=5],duration=2]"
+#   "[effect:img-box=images/events/kcat.png]"
+#   Per-place offset/scale: in=[player:x=0.02,y=-0.7,scale=1.2;textbox] (use ; to separate places when using options)
+# Effects play alongside the message above. Place config in config/effects.toml.
+# particles = name from config/particles.toml (or "" for none).
+# Set triggers_minigame = "minigame_id" on events that trigger minigames (e.g. "lantern"); that event can use final_event sprite from config.
+
+[[events]]
+emoji = "🚗"
+x = 8
+y = 6
+triggers_minigame = ""
+particles = "sparkles"
+dialogue = [
+  "narrator: It is July 2024...",
+
+  "[effect:emoji=❓,animation=drooping,in=[player:x=10,y=-8,scale=0.8],duration=3]"
+  "[effect:emoji=❓,animation=drooping,in=[textbox:x=600,y=-100,scale=2.6],duration=3]"
+  "narrator: Or is it?"
+  "narrator: Well, this definitely is kitty Marco.",
+  "narrator: But he doesn't seem too sure about the date..."
+  "narrator: Unfortunately, kitty Marco has been attacked by an evil witch and afflicted with the curse of goldfish brain. (one I'm sure you're familiar with 😓)"
+  "narrator: But as  you can see, he's very orange and very car!",
+  "narrator: (Works in car shop too)",
+  "narrator: But, what kitty Marco doesn't know yet...",
+
+  "narrator: Is that he's about to find the one he wants to share his litter box with.",
+  "[effect:emoji=💧,animation=drooping,in=[player:x=10,y=-8,scale=0.8],duration=3]"
+  "[effect:emoji=💧,animation=drooping,in=[textbox:x=600,y=-100,scale=2.6],duration=3]"
+  "narrator: What?",
+  "narrator: That sounds weird?",
+  "narrator: Well that's okay, kitties don't understand English after all.",
+  "narrator: But there's more than cars and litter boxes to this story.",
+  "narrator: And since it seems kitty Marco has lost his memories...",
+  "narrator: It is up to you to find the missing memories of kitty Marco, that are spread across sardine capital",
+  "narrator: And help him find his path back to his beloved purrtner.",
+  "narrator: [P.S: The game is mostly focused on story telling so there aren't gonna be any crazy puzzles like last time, but I still hope you enjoy 🥰]"
+]
+
+[[events]]
+emoji = "🕊️"
+x = 10
+y = 8
+triggers_minigame = ""
+particles = "hearts"
+dialogue = [
+  "narrator: Oh? What is this?",
+  "narrator: No kitty Marco! Those are not food!",
+  "Kitty Marco: But I'm real hungry 🥺"
+  "narrator: Those are the birds that allowed you to meet your beloved Kitta. I insist you mustn't eat them",
+  
+  "[effect:emoji=❓,animation=drooping,in=[player:x=10,y=-8,scale=0.8],duration=3]"
+  "[effect:emoji=❓,animation=drooping,in=[textbox:x=600,y=-100,scale=2.6],duration=3]"
+  "Kitty Marco: Hmmm, sorry sir. I do not know who you are or what you mean???",
+  "narrator: Well I'm obviously the narrator. Definitely not you typing all this talking to yourself in your head",
+  "narrator: Anyways, enough of that goof-talk. You need to hurry, it is almost the 14th and divas don't like tardiness",
+  "narrator: You must regain your memories, and find your Kitta before it's too late",
+
+  "[effect:emoji=‼️,animation=drooping,in=[player:x=10,y=-8,scale=0.8],duration=3]"
+  "[effect:emoji=‼️,animation=drooping,in=[textbox:x=600,y=-100,scale=2.6],duration=3]"
+  "Kitty Marco: That bird dropped something!!"
+
+  "[effect:img-box=images/scrn/01.jpg]",
+  "narrator: Ah! I see... this seems to have been the exact moment Kitty Marco found out he was Kitty.",
+  "narrator: How perplexing.",
+
+  "[effect:img-box=images/scrn/02.jpg]",
+  "narrator: Ah! No! Wait!",
+  "narrator: You weren't supposed to see that...",
+
+  "[effect:img-box=images/scrn/03.jpg]",
+  "narrator: Why do you keep looking?",
+  "narrator: She's not the evil witch that goldfish'ed your brain, I swear",
+
+  "narrator: No Kitty Marco stop! That's a picture of her in her sexy diva attire! Your kitty brain is not prepared for this yet! Stop!",
+  "[effect:img=images/events/shocked.jpg,animation=pop-up,in=screen,duration=0.5]"
+  "[effect:emoji=‼️,animation=drooping,in=[player:x=10,y=-8,scale=0.8],duration=3]"
+  "[effect:emoji=‼️,animation=drooping,in=[textbox:x=600,y=-100,scale=2.6],duration=3]"
+  "Kitty Marco: IS THIS YOUUUU??!"
+
+  "narrator: I knew this was coming, well there's no helping it now. Get out of here you got more to do!"
+]
+
+[[events]]
+emoji = "💝"
+x = 12
+y = 18
+triggers_minigame = ""
+particles = "fireflies"
+dialogue = [
+  "narrator: You want to know what happened in August, you say?",
+  "Kitty Marco: Yes! I must know",
+  "narrator: Well, on the finest beginnings of the month, on a very sunny day in the Sardine Capital...",
+  "narrator: You asked your Kitta to be your kittyfriend. Also the same day you were sending her...",
+  "[effect:img-box=images/scrn/04.jpg]",
+  "narrator: pictures of your filthy hands from working... Have you no shame?",
+  "Kitty Marco: Well... that can't be so bad... right?",
+  "narrator: The same day or day after she sent her first voice note...",
+  "narrator: It was just an audio of her barking. Who would've thought kitties could bark?"
+  "narrator: On the 3rd you were sending her a video of you doing pushups while saying her name",
+  "narrator: By the 10th you were sending her pictures of yourself covering only your kitty parts with a bath towel...",
+  "narrator: Well I suppose you got that sneaky naughty picture from her on your brother's birthday...",
+  "narrator: But still, are you trying to give her the reason when she calls you a whore?"
+  "narrator: Well you two might be on the same FREAKuency. Just get a room far away from everyone else, you two."
+  "narrator: I have even lost my charming narrator dialogue from how shocked I am."
+  "narrator: Now get out of here before I tell her about your naked pictures in front of the mirror, strategically covering your kitty parts"
+]
+
+[[events]]
+emoji = "🎀"
+x = 32
+y = 22
+triggers_minigame = ""
+particles = "hearts"
+dialogue = [
+  "Kitty Marco: Sir narrator, can you at least tell me that September was better?",
+  "narrator: Well, yes actually. If you consider getting pictures of her soapy tatas a better predicament",
+  
+  "[effect:img=images/events/shocked.jpg,animation=pop-up,in=screen,duration=0.5]"
+  "[effect:emoji=‼️,animation=drooping,in=[player:x=10,y=-8,scale=0.8],duration=3]"
+  "[effect:emoji=‼️,animation=drooping,in=[textbox:x=600,y=-100,scale=2.6],duration=3]"
+  "Kitty Marco: I DO recall that!!! By the kitty heavens,",
+  "Kitty Marco: Those hold as much healing power as they hold destructive power 🥵"
+  "Kitty Marco: What am I to do? How is a big kitty like me supposed to act like a grown up kitty around those?",
+  "Kitty Marco: Narrator, sir... I think I'm in danger!"
+  "narrator: You do realize I'm supposed to narrate and not to have a dialogue with you, right?"
+  "narrator: Ahem... where was I going. Right...",
+  "narrator: This was also the time that little Kitta became less little.",
+  "Kitty Marco: Her birthday!!! 🥺 I want to spend all of her birthdays with her! I want to spoil my angel :(",
+]
+
+
+[[events]]
+emoji = "🌹"
+x = 15
+y = 7
+triggers_minigame = ""
+particles = "hearts"
+dialogue = [
+  "narrator: Ah well, October and November were some tough months",
+  "Kitty Marco: Right, I think I remember. I spent 3 weeks without knowing a thing about my precious Kitta 😔",
+  "Kitty Marco: And when she came back, she was the one who had lost her memories.",
+  "Kitty Marco: She finally came back, but our 3.5 months together were gone...",
+  "Kitty Marco: I was pretty sad, but somehow we made it through even in such a hopeless situation.",
+  "Kitty Marco: After such a predicament, I came to realize one thing though",
+  "Kitty Marco: This gir- erhm kitty, meant the world to me. Much more than I had realized.",
+  "Kitty Marco: And if we made it through something like this, I believe we can make it through everything together.",
+  "Kitty Marco: I will always fight for this relationship like I had promised way back in our first month together",
+  "narrator: And then, not even a month later you were sending her a video of yourself dry humping your pillow",
+  "narrator: Per her request, if I remember correctly",
+  "narrator: You two are a match made in horny jail",
+  "Kitty Marco: Erhm... let's ignore such things 😅"
+  "Kitty Marco: Then December came, and I had the best birthday ever!",
+  "[effect:img-box=images/scrn/05.jpg]",
+  "Kitty Marco: And a month later I received the first two letters from her...",
+  "[effect:img-box=images/scrn/06.jpg]",
+  "Kitty Marco: A week after that, I started at the gym. 1 week before Valentine's day..."
+  "Kitty Marco: She had such a huge impact in my life... Where is she? I need her. I must find her"
+]
+
+[[events]]
+emoji = "🍓"
+x = 26
+y = 26
+triggers_minigame = ""
+particles = "hearts"
+dialogue = [
+  "Kitty Marco: We went through so so much, in just 1.5y",
+  "narrator: And shared so many freaky moments",
+
+  "[effect:emoji=💦,animation=drooping,in=[player:x=10,y=-8,scale=0.8],duration=3]",
+  "Kitty Marco: YESSS 🥵 She's honestly perfect...",
+  "Kitty Marco: She's absolutely drop dead gorgeous, stunning",
+  "Kitty Marco: I love the way she matches my freak",
+  "Kitty Marco: She's got a body of a goddess...",
+  "Kitty Marco: And as if she wasn't already perfect, she's got such a perfect personality too",
+  "narrator: Doesn't she ragebait you, and piss you off, and make you jealous about other guys, and sometimes acts mean to you?",
+  "Kitty Marco: Exactly! 🥵 Perfect! Just like I said.",
+  "Kitty Marco: I get a meannie, baddie, hot mommy, and sometimes a sweet, lovely girl. I get the full experience. I must be the luckiest man alive for sure.",
+  "[effect:img-box=images/scrn/07.jpg]",
+  "Kitty Marco: This is the smile I want to protect. This is the smile I wake up every day and give my best for.",
+  "Kitty Marco: The way I started taking pictures of the world around me more, to show her.",
+  "Kitty Marco: The way I devoted myself the best I could to my future with her",
+  "[effect:img-box=images/scrn/08.jpg]",
+  "Kitty Marco: I look at the sweet little angel she was as a kid, ",
+  "Kitty Marco: And I hope I can give her the space she needs to be as sweet, innocent and carefree as she looks in these pictures...",
+  "Kitty Marco: Even if her childhood may not have been the easiest, she still looks so kind and sweet.",
+  "Kitty Marco: No matter what, I'll give her the life she deserves, I'll always fight for her!",
+  "Kitty Marco: I need to find her, I can't be away from the light of my life",
+]
+
+# Final event: use sprite_url (like player sprite) or leave empty to use config [final_event].sprite_url / emoji fallback
+[[events]]
+x = 20
+y = 14
+triggers_minigame = "lantern"
+particles = "hearts"
+sprite_url = "images/events/kcat.png"
+dialogue = [
+  "Kitty Marco: Oh, there you are! I was worried 🥺",
+  "Kitta Kinza: Hiii hoe",
+  "Kitty Marco: Baby, I want you to know I really really love you",
+  "Kitta Kinza: Duhh, who wouldn't?",
+  "Kitty Marco: Yeah, yeah... But my love for you is bigger than anybody else's"
+  "Kitty Marco: You're the love of my life."
+  "Kitty Marco: I have something prepared for us!! Follow me!",
+]

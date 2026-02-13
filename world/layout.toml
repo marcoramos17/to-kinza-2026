@@ -1,0 +1,489 @@
+# World layout. Tiles: g=grass, w=water, p=pavement, s=sand (drawn as solid colors).
+# Organic coastline: water on left & bottom, grass→sand→water transition, curved borders.
+# Decorations: type = emoji (e.g. "🌳"), with optional scale, collision, wind.
+# Patches: noise-based clusters; expand_x/expand_y = half-extents; density = 0–1 or count.
+
+width = 40
+height = 30
+
+rows = [
+  "wwwwwwssgggggggggggggggggggggggggggggggggg",
+  "wwwwwsssgggggggggggggggggggggggggggggggggg",
+  "wwwwwssggggggggggggggggggggggggggggggggggg",
+  "wwwwsssggggggggggggggggggggggggggggggggggg",
+  "wwwwssgggggggggggggggggggggggggggggggggggg",
+  "wwwwssgggggggggggggggggggggggggggggggggggg",
+  "wwwwssggggggggggggppppgggggggggggggggggggg",
+  "wwwwwssgggggggggggppppgggggggggggggggggggg",
+  "wwwwwssgggggggggggppppgggggggggggggggggggg",
+  "wwwwwssggggggggggggggggggggppggggggggggggg",
+  "wwwwsssggggggggggggggggggggppggggggggggggg",
+  "wwwwssggggggggggggggggggggggppgggggggggggg",
+  "wwwwssgggggggggggggggggggggggggggggggggggg",
+  "wwwwssgggggggggggggggggggggggggggggggggggg",
+  "wwwwwssggggggggggggggggggggggggggggggggggg",
+  "wwwwwsssgggggggggggggggggggggggggggggggggg",
+  "wwwwwwssgggggggggggggggggggggggggggggggggg",
+  "wwwwwwssgggggggggggggggggggggggggggggggggg",
+  "wwwwwwsssggggggggggggggggggggggggggggggggg",
+  "wwwwwwwsssgggggggggggggggggggggggggggggggg",
+  "wwwwwwwwsssggggggggggggggggggggggggggggggg",
+  "wwwwwwwwssgggggggggggggggggggggggggggggggg",
+  "wwwwwwwwwsssgggggggggggggggggggggggggggggg",
+  "wwwwwwwwwssssggggggggggggggggggggggggggggg",
+  "wwwwwwwwwwsssssggggggggggggggggggggggggggg",
+  "wwwwwwwwwwwssssssggggggggggggggggggggggggg",
+  "wwwwwwwwwwwssssssggggggggggggggggggggggggg",
+  "wwwwwwwwwwwwsssssssggggggggggggggggggggggg",
+  "wwwwwwwwwwwwwssssssssggggggggggggggggggggg",
+  "wwwwwwwwwwwwwwsssssssssggggggggggggggggggg"
+]
+
+# Single decorations: type = emoji or config key. Scaled for character_scale 2.0.
+# Boats in water (assortment of 🛥️⛵🛶🚤, no collision, wind for floating effect)
+[[decorations]]
+x = 2
+y = 2
+type = "⛵"
+scale = 2.0
+collision = false
+wind = true
+
+[[decorations]]
+x = 3
+y = 10
+type = "🛥️"
+scale = 2.2
+collision = false
+wind = true
+
+[[decorations]]
+x = 2
+y = 18
+type = "🛶"
+scale = 1.8
+collision = false
+wind = true
+
+[[decorations]]
+x = 6
+y = 25
+type = "🚤"
+scale = 1.9
+collision = false
+wind = true
+
+# Palm trees on beach
+[[decorations]]
+x = 7
+y = 6
+type = "palm"
+scale = 3.0
+collision = true
+collision_scale = 0.4
+wind = true
+
+[[decorations]]
+x = 10
+y = 20
+type = "palm"
+scale = 2.8
+collision = true
+collision_scale = 0.4
+wind = true
+
+[[decorations]]
+x = 15
+y = 24
+type = "palm"
+scale = 2.9
+collision = true
+collision_scale = 0.4
+wind = true
+
+# Houses - clustered along streets (main street rows 6-8, cross street row 9-10)
+[[decorations]]
+x = 14
+y = 5
+type = "house"
+scale = 3.6
+collision = true
+collision_scale = 0.5
+wind = false
+
+[[decorations]]
+x = 20
+y = 5
+type = "house"
+scale = 3.8
+collision = true
+collision_scale = 0.5
+wind = false
+
+[[decorations]]
+x = 10
+y = 9
+type = "house"
+scale = 3.7
+collision = true
+collision_scale = 0.5
+wind = false
+
+[[decorations]]
+x = 18
+y = 9
+type = "house"
+scale = 3.5
+collision = true
+collision_scale = 0.5
+wind = false
+
+[[decorations]]
+x = 24
+y = 9
+type = "house"
+scale = 3.6
+collision = true
+collision_scale = 0.5
+wind = false
+
+[[decorations]]
+x = 26
+y = 11
+type = "house"
+scale = 3.5
+collision = true
+collision_scale = 0.5
+wind = false
+
+# Trees - mostly in countryside, sparse in town for easy navigation
+[[decorations]]
+x = 10
+y = 4
+type = "tree"
+scale = 3.2
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 28
+y = 4
+type = "tree"
+scale = 3.0
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 8
+y = 11
+type = "tree"
+scale = 2.9
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 32
+y = 10
+type = "tree"
+scale = 3.2
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 12
+y = 15
+type = "tree"
+scale = 3.1
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 22
+y = 14
+type = "tree"
+scale = 2.8
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 30
+y = 18
+type = "tree"
+scale = 3.2
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 36
+y = 12
+type = "tree"
+scale = 2.9
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 14
+y = 19
+type = "tree"
+scale = 3.0
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 26
+y = 21
+type = "tree"
+scale = 3.0
+collision = true
+collision_scale = 0.5
+wind = true
+
+[[decorations]]
+x = 34
+y = 20
+type = "tree"
+scale = 3.2
+collision = true
+collision_scale = 0.5
+wind = true
+
+# Rocks - spread along beach and in grass, properly scaled
+[[decorations]]
+x = 5
+y = 6
+type = "rock"
+scale = 1.6
+collision = true
+wind = false
+
+[[decorations]]
+x = 6
+y = 6
+type = "rock"
+scale = 1.4
+collision = true
+wind = false
+
+[[decorations]]
+x = 6
+y = 7
+type = "rock"
+scale = 1.5
+collision = true
+wind = false
+
+[[decorations]]
+x = 8
+y = 18
+type = "rock"
+scale = 1.7
+collision = true
+wind = false
+
+[[decorations]]
+x = 9
+y = 18
+type = "rock"
+scale = 1.3
+collision = true
+wind = false
+
+[[decorations]]
+x = 9
+y = 19
+type = "rock"
+scale = 1.5
+collision = true
+wind = false
+
+[[decorations]]
+x = 11
+y = 23
+type = "rock"
+scale = 1.4
+collision = true
+wind = false
+
+[[decorations]]
+x = 12
+y = 23
+type = "rock"
+scale = 1.6
+collision = true
+wind = false
+
+[[decorations]]
+x = 13
+y = 24
+type = "rock"
+scale = 1.2
+collision = true
+wind = false
+
+[[decorations]]
+x = 18
+y = 7
+type = "rock"
+scale = 1.3
+collision = true
+wind = false
+
+[[decorations]]
+x = 26
+y = 9
+type = "rock"
+scale = 1.5
+collision = true
+wind = false
+
+[[decorations]]
+x = 28
+y = 15
+type = "rock"
+scale = 1.4
+collision = true
+wind = false
+
+[[decorations]]
+x = 32
+y = 19
+type = "rock"
+scale = 1.6
+collision = true
+wind = false
+
+[[decorations]]
+x = 14
+y = 22
+type = "rock"
+scale = 1.2
+collision = true
+wind = false
+
+# Small touches: flowers, bench, street lamp
+[[decorations]]
+x = 11
+y = 6
+type = "flower"
+scale = 1.8
+collision = false
+wind = true
+
+[[decorations]]
+x = 15
+y = 7
+type = "flower"
+scale = 1.6
+collision = false
+wind = true
+
+[[decorations]]
+x = 23
+y = 6
+type = "flower"
+scale = 1.7
+collision = false
+wind = true
+
+[[decorations]]
+x = 19
+y = 12
+type = "flower"
+scale = 1.5
+collision = false
+wind = true
+
+[[decorations]]
+x = 10
+y = 8
+type = "flower"
+scale = 1.6
+collision = false
+wind = true
+
+# Grass patches: noise pattern, lower y drawn on top.
+[[patch]]
+type = "🌿"
+x = 12
+y = 4
+expand_x = 6
+expand_y = 4
+density = 25
+scale = 0.5
+scale_var = 0.25
+collision = false
+
+[[patch]]
+type = "🌿"
+x = 22
+y = 9
+expand_x = 8
+expand_y = 5
+density = 35
+scale = 0.5
+scale_var = 0.2
+collision = false
+
+[[patch]]
+type = "🌿"
+x = 34
+y = 13
+expand_x = 5
+expand_y = 6
+density = 28
+scale = 0.5
+scale_var = 0.3
+collision = false
+
+[[patch]]
+type = "🌿"
+x = 16
+y = 20
+expand_x = 7
+expand_y = 4
+density = 30
+scale = 0.5
+scale_var = 0.2
+collision = false
+
+[[patch]]
+type = "🌿"
+x = 30
+y = 22
+expand_x = 6
+expand_y = 3
+density = 22
+scale = 0.5
+scale_var = 0.25
+collision = false
+
+[[patch]]
+type = "🌿"
+x = 10
+y = 11
+expand_x = 5
+expand_y = 5
+density = 20
+scale = 0.45
+scale_var = 0.2
+collision = false
+
+[[patch]]
+type = "🌿"
+x = 28
+y = 6
+expand_x = 4
+expand_y = 4
+density = 15
+scale = 0.5
+scale_var = 0.2
+collision = false

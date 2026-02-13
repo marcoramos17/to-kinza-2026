@@ -1,0 +1,76 @@
+# Game config: tiles (colors; emojis for water waves), player, UI. Map layout is in world/layout.toml.
+# Tiles are drawn as solid colors. Decorations can use emoji = "🌳" or type = "tree" (see world/layout.toml).
+
+[world]
+width = 40
+height = 30
+tile_size = 40
+
+[player]
+sprite_url = "images/player/mcat.png"
+speed = 4
+
+# Sprite scale: player and final event use character_scale; other events use character_scale * 0.3
+[sprites]
+character_scale = 2.0
+
+[blocked_tiles]
+list = ["water"]
+
+[tiles.grass]
+color = "#3d7a35"
+emoji = "🌿"
+
+[tiles.water]
+color = "#1e5a8a"
+emoji = "🌊"
+
+[tiles.pavement]
+color = "#6b6b6b"
+emoji = "⬜"
+
+[tiles.sand]
+color = "#c4a35a"
+emoji = "🟫"
+
+# Emoji for each decoration type when using type = "tree" etc. in layout. Or set emoji in layout.
+[decorations]
+tree = "🌳"
+house = "🏠"
+rock = "🪨"
+palm = "🌴"
+flower = "🌷"
+
+[final_event]
+sprite_url = "images/events/sprite.png"
+
+[ui]
+dialogue_bg = "#fff5f8"
+dialogue_border = "#c41e3a"
+dialogue_text = "#2d1519"
+title_hearts = "❤️"
+
+[minigames.lantern]
+initial_opacity = 0.27
+message = "Will you be my valentine?"
+background_color = "#0a0a0a"
+overlay_color = "#000000"
+bloom_radius = 150
+bloom_intensity = 0.8
+bloom_brightness = 0.6
+stop_height = 0.3
+sway_amount = 15
+sway_speed = 2.0
+float_speed = 50
+opacity_speed = 0.5
+lantern_scale = 0.5
+flicker_intensity = 0.15
+flicker_speed = 8.0
+star_count = 120
+star_size = 1.2
+star_flicker_speed = 3.0
+star_color = "#ffffff"
+ground_color = "#0f2d0f"
+ground_height = 90
+sprite_url = "images/events/kmcats.png"
+sprite_scale = 0.5

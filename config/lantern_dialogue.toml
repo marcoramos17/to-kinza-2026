@@ -1,0 +1,8 @@
+# Dialogue shown when the player clicks "No" in the lantern minigame.
+# Same format as events.toml: "Name: message" or "narrator: message"
+
+[no_response]
+dialogue = [
+  "Kitty Marco: Sorry, this wasn't supposed to be here, let me get rid of that for you",
+  "Kitty Marco: Now you can click the correct option!"
+]

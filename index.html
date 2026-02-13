@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kinza 2026 — Valentine's Adventure</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>❤️ Kinza 2026 ❤️</h1>
+  <p class="subtitle">A Valentine's coastal adventure</p>
+  <div class="game-area">
+    <div id="mainGameWrapper" class="game-wrapper">
+      <canvas id="gameCanvas" width="800" height="600"></canvas>
+      <div id="effectOverlay" class="effect-overlay" aria-hidden="true"></div>
+      <div id="effectEmojiPlayer" class="effect-emoji"></div>
+      <div id="imgBoxOverlay" class="img-box-overlay" aria-hidden="true">
+        <div class="img-box">
+          <img class="img-box-image" src="" alt="">
+          <button type="button" class="img-box-close">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="minigameContainer" class="game-wrapper"></div>
+    <div id="dialogueBox" class="dialogue-box" aria-live="polite">
+      <span id="dialogueSpeaker" class="dialogue-speaker"></span>
+      <p id="dialogueMessage" class="dialogue-message"></p>
+      <p class="dialogue-next">Space / Enter — Next</p>
+    </div>
+    <div id="effectEmojiTextbox" class="effect-emoji"></div>
+  </div>
+  <div id="letterOverlay" class="letter-overlay" aria-hidden="true">
+    <div class="letter-box">
+      <div class="letter-content"></div>
+      <button type="button" class="letter-close">Close</button>
+    </div>
+  </div>
+  <p class="instructions">Arrow keys to move • Find the events in order • Stand on a sprite and press Space to talk • Last sprite starts the minigame.</p>
+  <script src="js/toml-parser.js"></script>
+  <script src="js/game-setup.js"></script>
+  <script src="js/dialogue.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/minigame-manager.js"></script>
+  <script src="js/minigames/lantern.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

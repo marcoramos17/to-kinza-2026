@@ -1,0 +1,29 @@
+# Animation styles for effects. Referenced by name in dialogue effects: animation = "pop-up"
+# duration in seconds; scale from 0-1; opacity 0-1
+
+[pop-up]
+duration = 0.3
+easing = "ease-out"
+scale_start = 0
+scale_end = 1
+opacity_start = 0
+opacity_end = 1
+
+# Anime-style exasperation droplet: appear, slide down slowly, then disappear.
+# duration comes from the effect (e.g. duration=3 in events.toml = 3 seconds).
+[drooping]
+easing = "linear"
+scale_start = 1
+scale_end = 1
+opacity_start = 1
+opacity_end = 0
+# Slide distance in pixels (e.g. ~0.3 tiles at 40px = 12)
+y_offset = 12
+
+[fade-in]
+duration = 0.25
+easing = "linear"
+scale_start = 1
+scale_end = 1
+opacity_start = 0
+opacity_end = 1

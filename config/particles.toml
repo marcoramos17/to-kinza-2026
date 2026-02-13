@@ -1,0 +1,37 @@
+# Particle effect types for events. Reference by name in events.toml: particles = "sparkles"
+# style: "float" = gentle drift upward/outward from emoji (lantern-like), then vanish
+# Colors: pink and white only
+
+[sparkles]
+count = 8
+color = "#ffb7c5"
+color_alt = "#ffffff"
+speed_min = 0.15
+speed_max = 0.4
+size_min = 2
+size_max = 4
+lifetime = 2.2
+style = "float"
+
+[hearts]
+count = 5
+emoji = "❤"
+color = "#ffb7c5"
+color_alt = "#ffe4ec"
+speed_min = 0.12
+speed_max = 0.35
+size_min = 10
+size_max = 14
+lifetime = 2.5
+style = "float"
+
+[fireflies]
+count = 6
+color = "#ffc0cb"
+color_alt = "#fff5f8"
+speed_min = 0.1
+speed_max = 0.3
+size_min = 3
+size_max = 5
+lifetime = 2.8
+style = "float"

@@ -1,0 +1,20 @@
+# Love letter shown when the player clicks "Yes" in the lantern minigame.
+# Edit the content below with your own message.
+
+[letter]
+# Use multiple lines; each array item is a paragraph or line.
+content = [
+  "My  Kinza,",
+  "",
+  "After so many moons with you, I still can't find the words to express to you how important you have become to me.",
+  "As I made this little project for you, I went through my gallery, to get a glimpse of the relationship we built together. And it dawned on me the extent of your impact in my life.",
+  "I noticed myself taking more pictures of the world around me, since I wanted to show it to you. I noticed myself taking more pictures of myself, as I wanted you to see me at my hottest. The way I started a business, resolved myself to build a proper future for us, started new hobbies.",
+  "My world truly expanded with you around.",
+  "I have always said it, and will say it any time. I didn't know it was possible to love the way I love you.",
+  "I truly hope that soon we'll light up the night sky at a lantern festival. I dream of the day I get to wake up in a nice hotel with you. For the days when we get to sit down and yap face to face the way we do on the phone now.",
+  "I hope you know, that from the bottom of my heart, I'm grateful.",
+  "Thank you for saying yes... both now, and on the 1st of August",
+  "",
+  "With all my heart, I love you.",
+  " - Marco"
+]
